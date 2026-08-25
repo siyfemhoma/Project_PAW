@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CreateCubeMesh : MonoBehaviour
+public class CreateRampMesh : MonoBehaviour
 {
     #region Inspector
     [Header("Mesh Filter Name")]
@@ -48,7 +48,7 @@ public class CreateCubeMesh : MonoBehaviour
         _mesh = new Mesh();
         _mesh.name = _filterName;
 
-        Vector3[] vertices = new Vector3[24]
+        Vector3[] vertices = new Vector3[18]
         {
             // bottom
             new Vector3(0, 0, 0),
@@ -56,25 +56,18 @@ public class CreateCubeMesh : MonoBehaviour
             new Vector3(0, 0, _depth),
             new Vector3(_width, 0, _depth),
 
-            // top
-            new Vector3(0, _height, 0),
-            new Vector3(_width, _height, 0),
+            // ramp
+            new Vector3(0, 0, 0),
+            new Vector3(_width, 0, 0),
             new Vector3(0, _height, _depth),
             new Vector3(_width, _height, _depth),
 
-            // back(world : -z)
-            new Vector3(0, 0, 0),
-            new Vector3(_width, 0, 0),
-            new Vector3(0, _height, 0),
-            new Vector3(_width, _height, 0),
-
             // right(world : +x)
             new Vector3(_width, 0, 0),
-            new Vector3(_width, 0, _depth),
-            new Vector3(_width, _height, 0),
             new Vector3(_width, _height, _depth),
+            new Vector3(_width, 0, _depth),
 
-            // front(world : +z)
+            // wall(world : +z)
             new Vector3(_width, 0, _depth),
             new Vector3(0, 0, _depth),
             new Vector3(_width, _height, _depth),
@@ -82,51 +75,41 @@ public class CreateCubeMesh : MonoBehaviour
 
             // left(world : -x)
             new Vector3(0, 0, _depth),
-            new Vector3(0, 0, 0),
             new Vector3(0, _height, _depth),
-            new Vector3(0, _height, 0)
+            new Vector3(0, 0, 0)
         };
 
         _mesh.vertices = vertices;
 
-        int[] tris = new int[36]
+        int[] tris = new int[24]
         {
             // bottomL
             1, 3, 0,
             // bottomR
             3, 2, 0,
 
-            // topL
+            // rampL
             4, 6, 5,
-            // topR
+            // rampR
             6, 7, 5,
 
-            // bL
-            8, 10, 9,
-            // bR
-            10, 11, 9,
+            // R
+            8, 9, 10,
 
-            // rL
-            12, 14, 13,
-            // rR
-            14, 15, 13,
+            // wL
+            11, 13, 12,
+            // wR
+            13, 14, 12,
 
-            // fL
-            16, 18, 17,
-            // fR
-            18, 19, 17,
-
-            // lL
-            20, 22, 21,
-            // lR
-            22, 23, 21
+            // L
+            15, 16, 17
         };
 
         _mesh.triangles = tris;
 
         _mesh.RecalculateNormals();
 
-        Vector2[] uv = new Vector2[24]
+        Vector2[] uv = new Vector2[18]
         {
             new Vector2(0, 0),
             new Vector2(_width, 0),
@@ -139,9 +122,8 @@ public class CreateCubeMesh : MonoBehaviour
             new Vector2(_width, _depth),
 
             new Vector2(0, 0),
-            new Vector2(_width, 0),
-            new Vector2(0, _height),
             new Vector2(_width, _height),
+            new Vector2(_width, 0),
 
             new Vector2(0, 0),
             new Vector2(_width, 0),
@@ -150,13 +132,7 @@ public class CreateCubeMesh : MonoBehaviour
 
             new Vector2(0, 0),
             new Vector2(_width, 0),
-            new Vector2(0, _height),
-            new Vector2(_width, _height),
-
-            new Vector2(0, 0),
-            new Vector2(_width, 0),
-            new Vector2(0, _height),
-            new Vector2(_width, _height)
+            new Vector2(0, _height)
         };
 
         _mesh.uv = uv;
