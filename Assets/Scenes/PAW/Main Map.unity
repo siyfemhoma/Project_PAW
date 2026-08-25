@@ -222,9 +222,9 @@ MonoBehaviour:
   _width: 100
   _height: 12
   _depth: 0.25
-  _x: 100.25
+  _x: 100
   _y: 0.5
-  _z: 0.25
+  _z: 0
 --- !u!1 &250663454
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,9 +413,9 @@ MonoBehaviour:
   _width: 100
   _height: 12
   _depth: 0.25
-  _x: 0.25
+  _x: 0
   _y: 0.5
-  _z: 100.25
+  _z: 100
 --- !u!4 &813134941
 Transform:
   m_ObjectHideFlags: 0
@@ -632,9 +632,9 @@ MonoBehaviour:
   _width: 100
   _height: 12
   _depth: 0.25
-  _x: 100.25
+  _x: 100
   _y: 0.5
-  _z: 100.25
+  _z: 100
 --- !u!1 &1241895220
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,9 +851,9 @@ MonoBehaviour:
   _width: 100
   _height: 12
   _depth: 0.25
-  _x: 0.25
+  _x: 0
   _y: 0.5
-  _z: 0.25
+  _z: 0
 --- !u!1 &2007531599
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,9 +888,9 @@ MonoBehaviour:
   _width: 100.5
   _height: 0.5
   _depth: 100.5
-  _x: 0
+  _x: -0.25
   _y: 0
-  _z: 0
+  _z: -0.25
 --- !u!4 &2007531601
 Transform:
   m_ObjectHideFlags: 0
