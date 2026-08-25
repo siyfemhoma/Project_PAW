@@ -36,7 +36,7 @@ public class CreateRampMesh : MonoBehaviour
     }
 
     [ContextMenu("Create Mesh")]
-    public void Create()
+    private void Create()
     {
         _meshRenderer = gameObject.AddComponent<MeshRenderer>();
         _meshRenderer.sharedMaterial = new Material(Shader.Find("Standard"));
