@@ -144,9 +144,9 @@ public class CreateCubeMesh : MonoBehaviour
             new Vector2(_width, _height),
 
             new Vector2(0, 0),
-            new Vector2(_width, 0),
-            new Vector2(0, _height),
-            new Vector2(_width, _height),
+            new Vector2(0, _depth),
+            new Vector2(_height, 0),
+            new Vector2(_height, _depth),
 
             new Vector2(0, 0),
             new Vector2(_width, 0),
@@ -154,9 +154,9 @@ public class CreateCubeMesh : MonoBehaviour
             new Vector2(_width, _height),
 
             new Vector2(0, 0),
-            new Vector2(_width, 0),
-            new Vector2(0, _height),
-            new Vector2(_width, _height)
+            new Vector2(0, _depth),
+            new Vector2(_height, 0),
+            new Vector2(_height, _depth)
         };
 
         _mesh.uv = uv;
