@@ -780,7 +780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1001411797424441831, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1001411797424441831, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
       propertyPath: m_LocalRotation.y
@@ -788,7 +788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1001411797424441831, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1001411797424441831, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -812,7 +812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1286269460651730525, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.344094
+      value: 10.344096
       objectReference: {fileID: 0}
     - target: {fileID: 1762410062995013561, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
       propertyPath: _defaultAbilities.Array.size
@@ -952,7 +952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5324559222263884119, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.344094
+      value: 10.344096
       objectReference: {fileID: 0}
     - target: {fileID: 6757068965218717064, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
       propertyPath: m_IsActive
@@ -976,7 +976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8819704702698310936, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.844094
+      value: 8.844095
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -984,9 +984,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1001411797424441831, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 707821862}
-    - targetCorrespondingSourceObject: {fileID: 1001411797424441831, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1441191904}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
 --- !u!1 &376696153
@@ -1116,7 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 4
   _height: 5.5
@@ -1403,7 +1400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab42a8ef0ba230a4db0fb9ecaafb3c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: Ramp
+  _filterName: SectS_Ramp
   _mt: {fileID: 2100000, guid: 5492355567918544f836da4b5178e7b7, type: 2}
   _width: 5
   _height: 2
@@ -1520,7 +1517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab42a8ef0ba230a4db0fb9ecaafb3c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: ramp
+  _filterName: SectA_Ramp
   _mt: {fileID: 2100000, guid: 5492355567918544f836da4b5178e7b7, type: 2}
   _width: 5
   _height: 3
@@ -1572,7 +1569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 1
   _height: 12
@@ -1841,7 +1838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab42a8ef0ba230a4db0fb9ecaafb3c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: Ramp
+  _filterName: SectS_Ramp
   _mt: {fileID: 2100000, guid: 5492355567918544f836da4b5178e7b7, type: 2}
   _width: 5
   _height: 2
@@ -2219,7 +2216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 10
   _height: 3
@@ -2497,7 +2494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 20
   _height: 12
@@ -2601,7 +2598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 1
   _height: 12
@@ -3038,7 +3035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 6
   _height: 7
@@ -3090,7 +3087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 20
   _height: 12
@@ -3142,7 +3139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 2
   _height: 1
@@ -3322,7 +3319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 20
   _height: 12
@@ -3639,7 +3636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab42a8ef0ba230a4db0fb9ecaafb3c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: ramp
+  _filterName: SectA_Ramp
   _mt: {fileID: 2100000, guid: 5492355567918544f836da4b5178e7b7, type: 2}
   _width: 6
   _height: 2.5
@@ -3954,7 +3951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 1
   _height: 12
@@ -3962,59 +3959,6 @@ MonoBehaviour:
   _x: 59
   _y: 0.5
   _z: 20
---- !u!1 &1441191903
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1441191904}
-  - component: {fileID: 1441191905}
-  m_Layer: 15
-  m_Name: RespawnCollider
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1441191904
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441191903}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2002617028}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1441191905
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441191903}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1446893230
 GameObject:
   m_ObjectHideFlags: 0
@@ -4247,8 +4191,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 24.6, y: 1.5, z: 19.6}
-  m_Center: {x: 12.3, y: 0.5, z: 9.8}
+  m_Size: {x: 24.96, y: 1.5, z: 19.96}
+  m_Center: {x: 12.48, y: 0.5, z: 9.98}
 --- !u!114 &1509306609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4261,14 +4205,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: KillZone_Ground
   _mt: {fileID: 2100000, guid: 325938c48e2b72f4bbed416ac51ac257, type: 2}
-  _width: 24.6
+  _width: 24.96
   _height: 1
-  _depth: 19.6
-  _x: 40.2
+  _depth: 19.96
+  _x: 40.02
   _y: 0
-  _z: 0.2
+  _z: 0.02
 --- !u!54 &1509306610
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4556,7 +4500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 20
   _height: 12
@@ -4608,7 +4552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 1
   _height: 12
@@ -4764,7 +4708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab42a8ef0ba230a4db0fb9ecaafb3c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: Ramp
+  _filterName: SectS_Ramp
   _mt: {fileID: 2100000, guid: 5492355567918544f836da4b5178e7b7, type: 2}
   _width: 5
   _height: 1.5
@@ -4869,7 +4813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 5
   _height: 8
@@ -5142,7 +5086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 5
   _height: 8
@@ -5246,7 +5190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7775a923c3495834b82bb2f51bf0480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filterName: wall
+  _filterName: SectA_Wall
   _mt: {fileID: 2100000, guid: c315d2b7c50a4074c9b701783c8b3d27, type: 2}
   _width: 1
   _height: 12
