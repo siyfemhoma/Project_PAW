@@ -18,6 +18,8 @@ public class CollectManager : MonoBehaviour
 
     #region Variables
     private BoxCollider _itemCollider;
+
+    protected int _collectCount = 0;
     #endregion
 
     private void Awake()
@@ -25,7 +27,8 @@ public class CollectManager : MonoBehaviour
         _itemCollider = GetComponent<BoxCollider>();
 
         if (_itemCollider == null )
-        {            
+        {
+            Debug.LogWarning("BC Missing");
             enabled = false;
             return;
         }
@@ -44,51 +47,51 @@ public class CollectManager : MonoBehaviour
         // Total : 25
 
         // sect A
-        GenerateItem(new Vector3(0, 0, 0));
+        GenerateItem(new Vector3(5, 2, 3));
 
-        // sect B1
-        GenerateItem(new Vector3(0, 0, 0));
+        //// sect B1
+        //GenerateItem(new Vector3(0, 0, 0));
 
-        // sect B2
-        GenerateItem(new Vector3(0, 0, 0));
-        GenerateItem(new Vector3(0, 0, 0));
-        GenerateItem(new Vector3(0, 0, 0));
+        //// sect B2
+        //GenerateItem(new Vector3(0, 0, 0));
+        //GenerateItem(new Vector3(0, 0, 0));
+        //GenerateItem(new Vector3(0, 0, 0));
 
-        // sect C1
-        GenerateItem(new Vector3(0, 0, 0));
-        GenerateItem(new Vector3(0, 0, 0));
-        GenerateItem(new Vector3(0, 0, 0));
+        //// sect C1
+        //GenerateItem(new Vector3(0, 0, 0));
+        //GenerateItem(new Vector3(0, 0, 0));
+        //GenerateItem(new Vector3(0, 0, 0));
 
-        // sect C2
-        GenerateItem(new Vector3(0, 0, 0));
-        GenerateItem(new Vector3(0, 0, 0));
+        //// sect C2
+        //GenerateItem(new Vector3(0, 0, 0));
+        //GenerateItem(new Vector3(0, 0, 0));
 
-        // sect M
-        GenerateItem(new Vector3(0, 0, 0));
-        GenerateItem(new Vector3(0, 0, 0));
-        GenerateItem(new Vector3(0, 0, 0));
-        GenerateItem(new Vector3(0, 0, 0));
-        GenerateItem(new Vector3(0, 0, 0));
-        GenerateItem(new Vector3(0, 0, 0));
-        GenerateItem(new Vector3(0, 0, 0));
+        //// sect M
+        //GenerateItem(new Vector3(0, 0, 0));
+        //GenerateItem(new Vector3(0, 0, 0));
+        //GenerateItem(new Vector3(0, 0, 0));
+        //GenerateItem(new Vector3(0, 0, 0));
+        //GenerateItem(new Vector3(0, 0, 0));
+        //GenerateItem(new Vector3(0, 0, 0));
+        //GenerateItem(new Vector3(0, 0, 0));
 
-        // D1
-        GenerateItem(new Vector3(0, 0, 0));
+        //// D1
+        //GenerateItem(new Vector3(0, 0, 0));
         
-        // D2
-        GenerateItem(new Vector3(0, 0, 0));
+        //// D2
+        //GenerateItem(new Vector3(0, 0, 0));
 
-        // E
-        GenerateItem(new Vector3(0, 0, 0));
-        GenerateItem(new Vector3(0, 0, 0));
+        //// E
+        //GenerateItem(new Vector3(0, 0, 0));
+        //GenerateItem(new Vector3(0, 0, 0));
 
-        // F1
-        GenerateItem(new Vector3(0, 0, 0));
-        GenerateItem(new Vector3(0, 0, 0));
+        //// F1
+        //GenerateItem(new Vector3(0, 0, 0));
+        //GenerateItem(new Vector3(0, 0, 0));
 
-        // F2
-        GenerateItem(new Vector3(0, 0, 0));
-        GenerateItem(new Vector3(0, 0, 0));
+        //// F2
+        //GenerateItem(new Vector3(0, 0, 0));
+        //GenerateItem(new Vector3(0, 0, 0));
     }
 
     private void GenerateItem(Vector3 spawnPosition)
@@ -102,7 +105,7 @@ public class CollectManager : MonoBehaviour
         GameObject item = Instantiate(_collectItem, spawnPosition, Quaternion.identity);
     }
 
-    protected void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other == null)
         {
@@ -123,11 +126,9 @@ public class CollectManager : MonoBehaviour
             }
         }
 
-        int collectCount = 0;
-
         _SE_PickUp.Play();
 
         Destroy(other.gameObject);
-        collectCount++;
+        _collectCount++;
     }
 }

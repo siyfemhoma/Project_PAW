@@ -12,6 +12,7 @@ TagManager:
   - Teeter
   - MovableGround
   - Mantle
+  - Item
   layers:
   - Default
   - TransparentFX
