@@ -344,9 +344,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 156481424}
+  - component: {fileID: 156481425}
   m_Layer: 0
   m_Name: CheckPoint_A
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -366,6 +367,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 608048087}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &156481425
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156481423}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 5}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &165246818
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,11 +982,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8053880108115816984, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.278618
+      value: 28.50018
       objectReference: {fileID: 0}
     - target: {fileID: 8053880108115816984, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.34559
+      value: 8.194096
       objectReference: {fileID: 0}
     - target: {fileID: 8819704702698310936, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -984,7 +1006,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1001411797424441831, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 707821862}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4644305293739828992, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2002617030}
+    - targetCorrespondingSourceObject: {fileID: 4644305293739828992, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2002617029}
   m_SourcePrefab: {fileID: 100100000, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
 --- !u!1 &376696153
 GameObject:
@@ -4131,12 +4159,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1509306606}
   - component: {fileID: 1509306609}
-  - component: {fileID: 1509306608}
-  - component: {fileID: 1509306607}
+  - component: {fileID: 1509306611}
   - component: {fileID: 1509306610}
   m_Layer: 0
   m_Name: KillZone_A
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4156,43 +4183,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 608048087}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1509306607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509306605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 041b19fa599b6a84d821488572ba5d42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _checkPoint: {fileID: 156481424}
-  _useTagFilter: 1
-  _targetTag: Player
-  _SE_Respawn: {fileID: 1162320749}
---- !u!65 &1509306608
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509306605}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 24.96, y: 1.5, z: 19.96}
-  m_Center: {x: 12.48, y: 0.5, z: 9.98}
 --- !u!114 &1509306609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4213,7 +4203,19 @@ MonoBehaviour:
   _x: 40.02
   _y: 0
   _z: 0.02
---- !u!54 &1509306610
+--- !u!114 &1509306610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509306605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20afce61dbe1cb04c91fa36f4150d014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1509306611
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5198,11 +5200,52 @@ MonoBehaviour:
   _x: 59
   _y: 0.5
   _z: 29
+--- !u!1 &2002617007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4644305293739828992, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
+  m_PrefabInstance: {fileID: 363833736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2002617028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1001411797424441831, guid: 68797c8790df0784b92ba23169b8608f, type: 3}
   m_PrefabInstance: {fileID: 363833736}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2002617029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002617007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041b19fa599b6a84d821488572ba5d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _useTagFilter: 1
+  _targetTag: Respawn
+  _SE_Respawn: {fileID: 1162320749}
+--- !u!65 &2002617030
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002617007}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3, y: 0.3, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2007531599
 GameObject:
   m_ObjectHideFlags: 0

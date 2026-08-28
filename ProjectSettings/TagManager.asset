@@ -13,6 +13,7 @@ TagManager:
   - MovableGround
   - Mantle
   - Item
+  - CheckPoint
   layers:
   - Default
   - TransparentFX

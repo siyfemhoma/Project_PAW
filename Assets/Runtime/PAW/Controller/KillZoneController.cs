@@ -2,29 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider), typeof(Rigidbody))]
+[RequireComponent(typeof(BoxCollider))]
 public class KillZoneController : MonoBehaviour
 {
     #region Inspector
-    [Header("Check Point")]
-    [SerializeField] private Transform _checkPoint;
-
     [Header("Collider Option")]
     [SerializeField] private bool _useTagFilter = true;
-    [SerializeField] private string _targetTag = "Player";
+    [SerializeField] private string _targetTag = "Respawn";
 
     [Header("Sound")]
     [SerializeField] private AudioSource _SE_Respawn;
     #endregion
 
     #region Variables
+    private CharacterController _cc;
     private BoxCollider _triggerCollider;
-    private Rigidbody _rd;
+    private Vector3 _checkPoint;
+    private string _checkPointTag = "CheckPoint";
     #endregion
 
     private void Awake()
     {
         _triggerCollider = GetComponent<BoxCollider>();
+
+        _cc = FindObjectOfType<CharacterController>();
 
         if ( _triggerCollider == null )
         {
@@ -32,20 +33,8 @@ public class KillZoneController : MonoBehaviour
             return;
         }
 
-        _rd = GetComponent<Rigidbody>();
-
-        if (_rd == null)
-        {
-            enabled = false;
-            return;
-        }
-
         _triggerCollider.isTrigger = true;
         _triggerCollider.enabled = true;
-        
-        _rd.useGravity = false;
-        _rd.isKinematic = true;
-        _rd.constraints = RigidbodyConstraints.FreezeAll;
     }
 
 
@@ -64,7 +53,14 @@ public class KillZoneController : MonoBehaviour
                 return;
             }
 
-            if (!other.CompareTag(_targetTag))
+            if (other.CompareTag(_checkPointTag))
+            {
+                _checkPoint = other.transform.position;
+                Debug.Log("Checkpoint set");
+                return;
+            }
+
+            else if (!other.CompareTag(_targetTag))
             {
                 return;
             }
@@ -72,6 +68,16 @@ public class KillZoneController : MonoBehaviour
 
         _SE_Respawn.Play();
 
-        other.transform.position = _checkPoint.position;
+        if (_checkPoint != null)
+        {
+            _cc.enabled = false;
+            this.transform.position = _checkPoint;
+            _cc.enabled = true;
+        }
+        else
+        {
+            Debug.LogWarning("Check Point is Missing.");
+            this.transform.position = Vector3.one;
+        }
     }
 }
