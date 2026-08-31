@@ -47,7 +47,7 @@ public class CollectManager : MonoBehaviour
         // Total : 25
 
         // sect A
-        GenerateItem(new Vector3(5, 2, 3));
+        GenerateItem(new Vector3(51, 6, 2.5f));
 
         //// sect B1
         //GenerateItem(new Vector3(0, 0, 0));

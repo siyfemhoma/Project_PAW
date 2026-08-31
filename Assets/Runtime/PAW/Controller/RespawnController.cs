@@ -43,6 +43,7 @@ public class RespawnController : MonoBehaviour
     private void Start()
     {
         this.transform.position = _inputSpawnPoint.position;
+        _checkPoint = _inputSpawnPoint.position;
     }
 
     private void Update()
@@ -53,12 +54,6 @@ public class RespawnController : MonoBehaviour
             {
                 _cc.enabled = false;
                 this.transform.position = _checkPoint;
-                _cc.enabled = true;
-            }
-            else
-            {
-                _cc.enabled = false;
-                this.transform.position = _inputSpawnPoint.position;
                 _cc.enabled = true;
             }
         }
