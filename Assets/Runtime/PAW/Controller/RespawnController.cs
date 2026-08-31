@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider))]
-public class KillZoneController : MonoBehaviour
+public class RespawnController : MonoBehaviour
 {
     #region Inspector
+    [Header("Spawn Point")]
+    [SerializeField] private Transform _inputSpawnPoint;
+
     [Header("Collider Option")]
     [SerializeField] private bool _useTagFilter = true;
     [SerializeField] private string _targetTag = "Respawn";
@@ -37,6 +40,29 @@ public class KillZoneController : MonoBehaviour
         _triggerCollider.enabled = true;
     }
 
+    private void Start()
+    {
+        this.transform.position = _inputSpawnPoint.position;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (_checkPoint != null)
+            {
+                _cc.enabled = false;
+                this.transform.position = _checkPoint;
+                _cc.enabled = true;
+            }
+            else
+            {
+                _cc.enabled = false;
+                this.transform.position = _inputSpawnPoint.position;
+                _cc.enabled = true;
+            }
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -77,7 +103,7 @@ public class KillZoneController : MonoBehaviour
         else
         {
             Debug.LogWarning("Check Point is Missing.");
-            this.transform.position = Vector3.one;
+            this.transform.position = _inputSpawnPoint.position;
         }
     }
 }
