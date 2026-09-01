@@ -50,7 +50,7 @@ public class CollectManager : MonoBehaviour
         GenerateItem(new Vector3(51, 6, 2.5f));
 
         //// sect B1
-        //GenerateItem(new Vector3(0, 0, 0));
+        GenerateItem(new Vector3(9.5f, 5.75f, 12));
 
         //// sect B2
         //GenerateItem(new Vector3(0, 0, 0));
