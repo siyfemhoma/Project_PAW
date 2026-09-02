@@ -63,7 +63,7 @@ public class CollectManager : MonoBehaviour
         //GenerateItem(new Vector3(0, 0, 0));
 
         //// sect C2
-        //GenerateItem(new Vector3(0, 0, 0));
+        GenerateItem(new Vector3(2.5f, 10f, 7f));
         //GenerateItem(new Vector3(0, 0, 0));
 
         //// sect M
