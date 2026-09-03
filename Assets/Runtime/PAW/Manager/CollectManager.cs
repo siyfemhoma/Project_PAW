@@ -47,18 +47,18 @@ public class CollectManager : MonoBehaviour
         // Total : 25
 
         // sect A
-        GenerateItem(new Vector3(51, 6, 2.5f));
+        GenerateItem(new Vector3(51f, 6f, 2.5f));
 
         //// sect B1
-        GenerateItem(new Vector3(9.5f, 5.75f, 12));
+        GenerateItem(new Vector3(9.5f, 5.75f, 12f));
 
         //// sect B2
-        //GenerateItem(new Vector3(0, 0, 0));
+        GenerateItem(new Vector3(14f, 10f, 33.5f));
         //GenerateItem(new Vector3(0, 0, 0));
         //GenerateItem(new Vector3(0, 0, 0));
 
         //// sect C1
-        //GenerateItem(new Vector3(0, 0, 0));
+        GenerateItem(new Vector3(24f, 2f, 61.5f));
         //GenerateItem(new Vector3(0, 0, 0));
         //GenerateItem(new Vector3(0, 0, 0));
 
