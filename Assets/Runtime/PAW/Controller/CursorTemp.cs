@@ -21,6 +21,18 @@ public class CursorTemp : MonoBehaviour
     
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (_cursorLockMode == CursorLockMode.Locked)
+            {
+                _cursorLockMode = CursorLockMode.None;
+                Cursor.lockState = _cursorLockMode;
+            }
+            else if (_cursorLockMode == CursorLockMode.None)
+            {
+                _cursorLockMode = CursorLockMode.Locked;
+                Cursor.lockState = _cursorLockMode;
+            }
+        }
     }
 }
